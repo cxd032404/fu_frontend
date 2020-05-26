@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>文体之窗</title>
 </head>
-  <body>
+  <body  style="visibility:hidden;">
     <div id="app"></div>
     <!-- built files will be auto injected -->
 
@@ -18,14 +18,17 @@
   <script type="text/javascript">
   (function (doc, win) {
     var docEl = doc.documentElement,
+      bodys = document.getElementsByTagName('body')[0],
         resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
         recalc = function () {
             var clientWidth = docEl.clientWidth;
             if (!clientWidth) return;
             if(clientWidth>=750){
                 docEl.style.fontSize = '100px';
+                bodys.style.visibility = 'visible';
             }else{
                 docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                bodys.style.visibility = 'visible';
             }
         };
     if (!doc.addEventListener) return;

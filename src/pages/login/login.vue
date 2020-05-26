@@ -78,7 +78,7 @@ export default {
               password:this.password,
             }
             // let url = this.api.userApi.getMologin
-            let url = "/login/user/mobileLogin"
+            let url = "/login/user/getTest"
             // let url = this.api.userApi.getMologin
             this.axios.post(url,param).then((res) => {
 

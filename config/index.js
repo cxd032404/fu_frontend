@@ -6,35 +6,31 @@ const path = require('path')
 
 module.exports = {
   dev: {
-
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://dev-api.bestdo.cn',
+        target: 'http://api.bestdo.cn',
+        // target: 'http://api.staffhome.cn',
         changeOrigin: true,
         pathRewrite: {
           '^/api/': ''
         }
-      },
-
-      '/login': {
-        // target: 'http://api.bestdo.cn',
-        target: 'http://api.bestdo.cn',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/login/': ''
-        }
       }
     },
+
     // Various Dev Server settings
-    host: '192.168.31.185', // can be overwritten by process.env.HOST
+    host: '192.168.31.185',//'localhost', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
+
+
+
+
 
     // Use Eslint Loader?
     // If true, your code will be linted during bundling and

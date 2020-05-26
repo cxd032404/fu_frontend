@@ -1,12 +1,18 @@
 <template lang="html">
 
-    <div class="mmms">
-      <ul>
-        <li  @click="index()"><h2>index</h2></li>
-        <li  @click="aacc()"><h2>aacc</h2></li>
-        <li  @click="apply()"><h2>apply</h2></li>
-      </ul>
+    <div class="">
+        <div class="head_top_a">
+            <van-cell title="单元格" is-link />
+        </div>
     </div>
+      <!-- <div class="mmms">
+        <ul>
+
+          <li  @click="index()"><h2>index</h2></li>
+          <li  @click="huodong()"><h2>活动类型1</h2></li>
+          <li  @click="paihang()"><h2>排行榜</h2></li>
+        </ul>
+      </div> -->
 
 </template>
 
@@ -22,14 +28,6 @@ export default {
 
   },
   watch:{
-    $route(to, from) {
-       if (to.name == "aacc") {
-          this.aacc =   JSON.parse(a.aacc);
-           this.filter.is_my = 0;
-          this.filter.is_join = 1;
-        }
-      this.gethome();
-    }
   },
   mounted() {
 
@@ -48,6 +46,12 @@ export default {
     index(){
       this.$router.push({
           name:'index'
+      })
+    },
+    //活动类型1
+    huodong(){
+      this.$router.push({
+          name:'huodongtype'
       })
     },
 

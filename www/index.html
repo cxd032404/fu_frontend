@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head lang=en><meta charset=UTF-8><link href=/favicon.ico rel="shortcut icon"><meta name=viewport content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,width=device-width"><meta http-equiv=Content-Type content="text/html; charset=utf-8"><title>文体之窗</title><link href=/static/css/app.e6d198a853fa5fd2edc76e4b5da7fe41.css rel=stylesheet></head><body style=visibility:hidden;><div id=app></div><script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=/static/js/vendor.95a0fb3b010ac0a6356f.js></script><script type=text/javascript src=/static/js/app.37309775c94b940d92b2.js></script></body><script type=text/javascript>(function (doc, win) {
+    var docEl = doc.documentElement,
+      bodys = document.getElementsByTagName('body')[0],
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+                bodys.style.visibility = 'visible';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                bodys.style.visibility = 'visible';
+            }
+        };
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);</script></html>

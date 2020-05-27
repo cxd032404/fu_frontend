@@ -162,9 +162,11 @@ height:auto;}
 .bank_tit{height: 1rem;line-height: 1rem;}
 
 .pb_tag_top{height: 0.88rem;line-height: 0.88rem;text-align: center;font-size: 0.36rem;background:rgba(248,248,248,1);}
-.pb_tag_top{position: relative;}
+.pb_tag_top{position: fixed;;margin-bottom: 0.88rem;z-index: 999;width: 100%;top: 0px;left: 0px;}
+.pb_top_zhanwei{height: 0.88rem;}
+.hd_share_top{position: fixed;;margin-bottom: 0.88rem;z-index: 999;width: 100%;top: 0px;left: 0px;}
 .pb_tag_top>span {position: absolute;left: 0px;width: 0.48rem;height: auto;top:0.18rem;left: 0.24rem;}
-.bank_tit .fl img{width:0.32rem;display: inline-block;margin-right: 4px;}
+.bank_tit .fl img{width:0.32rem;display: inline-block;margin-right: 4px;position: relative;top: 0.06rem;}
 .bank_tit .fr img{width: 0.37rem;height: auto;display: inline-block;position:relative;top: 3px;margin-right: 0px;}
 .wenti_fenlei ul li{float:left;}
 .wenti_top_img{height: auto;overflow: hidden;}
@@ -663,7 +665,7 @@ line-height:0.32rem;}
 
 .xianj_all_nr{text-align:justify; text-justify:inter-ideograph;}
 
-/* 
+/*
 .pb_tag_top{position: fixed;top: 0px;left: 0px;width: 100%;}
 .rongyulist_top {position: fixed;top: 0.88rem;left: 0px;width: 100%;background: #fff;} */
 /* .rongyu_content {margin-top:2.76rem;} */

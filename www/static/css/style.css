@@ -466,7 +466,7 @@ border: 0.03rem solid;border-color:transparent transparent #576B95 #576B95;
 margin-top: -0.12rem;right: -10px;}
 .bisaishow  .van-dropdown-menu__title--down::after{margin-top: -0.05rem;}
 
-.my_router{position: fixed;bottom: 10%;left: 0px;width: 0.5rem;height: auto;}
+.my_router{position: fixed;bottom: 10%;left: 0px;width: 0.88rem;height: auto;}
 
 .my_pos_num{display: table;width: auto;margin: 0px auto;margin-top: 0.6rem;}
 .my_pos_num ul li{display: table-cell;width: 2.3rem;height: 0.88rem;line-height: 0.88rem;text-align: center;color:  #444054 ;
@@ -552,6 +552,7 @@ line-height:0.28rem;}
 
 .jinpin_vd_list ul li {position: relative;overflow: hidden;margin-top: 0.4rem;height: auto;}
 .jp_vd_nr video{width: 100%;height: auto;border-radius: 0.12rem;}
+.jp_vd_nr{border-radius: 0.15rem;overflow: hidden;}
 .jp_vd_ms{position: absolute;top:50%;left: 50%;color: #fff;transform: translate(-50%,-50%);width: 70%;}
 .jp_vd_ms h2{font-size: 0.35rem;font-weight:bold;
 color:rgba(255,255,255,1);letter-spacing:1px;margin-bottom: 0.2rem;}
@@ -622,7 +623,7 @@ border-radius: 0.3rem;
 }
 .rongyulist_top ul li.active::before{width: 0.39rem !important;}
 .rongyu_box ul li{background: #fff;padding:0.24rem;border-radius: 0.12rem;margin-top: 0.4rem;height: auto;overflow: hidden;}
-.ryu_rt{width: 2.22rem;height: 1.66rem;overflow: hidden;position: relative;}
+.ryu_rt{width: 2.22rem;height: 1.66rem;overflow: hidden;position: relative;border-radius: 0.15rem;overflow: hidden;}
 .ryu_rt img{position:absolute;top: 50%;transform:translateY(-50%);width: auto;height: 100%;}
 .ryu_lt h2{font-size:0.36rem;
 font-family:PingFangSC-Medium,PingFang SC;
@@ -704,13 +705,19 @@ background: none;}
 
 .jianbuzou_pic{padding-top: 20%;}
 
-.xieyi_content{height: 50vh;width: 100%;;}
-.user_content{height: 50vh;width: 100%;;}
-.user_pop .van-popup{width: 50% !important;padding: 0.5rem;line-height: 0.44rem;font-size: 0.28rem;letter-spacing: 0.01rem;}
+/* .xieyi_content{height: 50vh;width: 100%;;}
+.user_content{height: 50vh;width: 100%;;} */
+.user_pop .van-popup{width: 70% !important;padding: 0.5rem;line-height: 0.44rem;font-size: 0.28rem;letter-spacing: 0.01rem;height: auto;}
 .user_pop{text-align: justify;
 text-align-last: justify;}
-.user_pop .van-overlay{background-color: rgba(0,0,0,.5);}
-.user_pop .van-popup__close-icon{position: fixed;right: 0.1rem;top: 0.2rem;}
+.user_pop  .all_xy_nr_ct{height: 5rem;overflow: auto;margin-top:6%;}
+
+
+.user_pop_2 .van-popup{width: 80%;line-height: 0.5rem;font-size: 0.36rem;height: auto;;padding: 0.7rem 0.3rem;}
+/* .user_pop_2 .van-popup__close-icon{position: fixed !important;top: 0.2rem;left: 0.2rem;background: #fff;} */
+.user_pop_2  .all_xy_nr_ct{height: 5rem;overflow: auto;margin-top: 7%;}
+
+
 
 .zhengce_chek  .van-checkbox__icon .van-icon{background:url("../images/choose_agree_no.png") no-repeat center center !important;
 background-size: cover !important;border: none;}
@@ -756,7 +763,8 @@ background:rgba(248,248,248,1);border: none;text-align: center;
 }
 .vd_btn_nr img{width: 0.24rem;display: inline-block;margin-top: 0.2rem;}
 
-.xunlian{height: 1.2rem;overflow: hidden;}
+/* .xunlian{height: 1.2rem;overflow: hidden;} */
+.xunlian{height: auto;overflow: hidden;}
 .xunlian.active{height: auto;transition: all .5s ease;}
 
 
@@ -808,3 +816,11 @@ padding-right: 0.42rem;}
 
 .bisai_nr .van-overlay{top: 1rem !important;z-index: 77 !important;}
 .bisai_nr .van-popup--top{top: 1rem !important;z-index: 77 !important;border-radius: 0px !important;}
+
+.bisai_select ul li{height: 1rem;line-height: 1rem;font-size: 0.28rem;padding:0px 0.2rem; }
+
+.bisai_select span{display: inline-block;}
+.bisai_select dbo{display: inline-block;float: right;width: 0.18rem;height: auto;margin-top: 0.3rem;}
+
+.bisaishow span{font-size: 0.28rem;}
+.bisaishow span img{display: inline-block;width: 0.3rem;margin-left: 0.1rem;}

@@ -767,3 +767,38 @@ background:rgba(248,248,248,1);border: none;text-align: center;
 .xiangq_cont h1 img{width: 0.5rem;display: inline-block;vertical-align: middle;margin-right: 0.2rem;}
 
 .upload_tishi{color: #ccc;margin-top: 0.2rem;}
+.my_cont_1{position: relative;z-index: 20;}
+.my_ct_pos{position: absolute;top: 0.8rem;left: 0.6rem;}
+.pos_m_a{margin-right:0.3rem; }
+.pos_m_a img{width: 1.2rem;height: auto;}
+.pos_m_b h1{font-size:0.4rem;
+font-family:PingFangSC-Medium,PingFang SC;
+font-weight:500;
+color:rgba(68,64,84,1);margin-bottom: 0.24rem;
+line-height:0.4rem;}
+.pos_m_b button{width:1.8rem;
+height:0.6rem;line-height: 0.6rem;
+border-radius:0.3rem;
+border:1px solid rgba(143,140,152,1);
+font-size:0.28rem;
+font-family:PingFang-SC-Medium,PingFang-SC;
+font-weight:500;
+color:rgba(124,121,135,1);
+background: none;
+line-height:0.28rem;
+}
+.my_cont_2 ul li>img{width: 0.42rem;height: auto;display: inline-block;vertical-align: middle;margin-right: 0.4rem;}
+.my_cont_2 ul li dbo img{width: 0.15rem;height: auto;display: inline-block;}
+.my_cont_2 ul li dbo{float: right;}
+.my_cont_2 ul li{height: 1rem;line-height: 1rem;
+  font-size:0.32rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(68,64,84,1);border-bottom: 1px solid rgba(248,248,248,1);
+  text-shadow:0px 0.04rem 0.2rem rgba(238,238,238,1);
+}
+.my_cont_2 {border-radius: 0.12rem;top: -0.32rem;position: relative;z-index: 22;background: #fff;
+box-shadow:0px 0.04rem 0.2rem 0px rgba(238,238,238,1);
+}
+.my_cont_2 ul {padding-left: 0.42rem;
+padding-right: 0.42rem;}

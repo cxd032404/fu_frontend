@@ -806,5 +806,5 @@ padding-right: 0.42rem;}
 
 .van-uploader__mask .van-loading{position: static !important;width: auto;height: auto;top: auto;left: auto;}
 
-.bisai_nr{position: fixed;top: 1rem;}
-.bisai_nr .van-overlay{top: 1rem !important;}
+.bisai_nr .van-overlay{top: 1rem !important;z-index: 77 !important;}
+.bisai_nr .van-popup--top{top: 1rem !important;z-index: 77 !important;border-radius: 0px !important;}

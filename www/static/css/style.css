@@ -400,7 +400,7 @@ border-radius:0.12rem;font-size:0.32rem; }
 .content_login .van-button--small{background:#444054;width:1.76rem;
 height:0.6rem;;
 background:rgba(68,64,84,1);
-border-radius:0.06rem;font-size:0.28rem;font-weight:500;border: none;
+border-radius:0.06rem;font-size:0.23rem;font-weight:500;border: none;
 color:rgba(255,255,255,1);
 }
 
@@ -828,6 +828,6 @@ padding-right: 0.42rem;}
 .mengce_clas{position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;background:rgba(0,0,0,0.2);}
 
 .mengce_clas img{width: 0.96rem;position: absolute;top: 50%;left: 50%;transform:translate(-50%,-50%);}
-
+.content_login .van-button--small{font-size: 0.24rem !important;}
 
 .add_n_zc{padding: 0.3rem;line-height: 0.45rem;font-size: 0.28rem;text-align:justify;text-justify:inter-ideograph;}

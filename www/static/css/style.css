@@ -702,7 +702,7 @@ opacity:0.6;border-color: no;}
 
 .content_login .van-button--small{font-weight: 500;color:rgba(244,124,45,1);border:1px solid rgba(244,124,45,1);
 background: none;}
-.content_login .content{padding-top: 20%;}
+.content_login .content{padding-top: 10%;}
 
 .jianbuzou_pic{padding-top: 20%;}
 
@@ -832,3 +832,13 @@ padding-right: 0.42rem;}
 .sz_all_sss  .van-cell{border-bottom: 1px solid rgba(235,235,235,1);padding: 0px;height: 0.99rem;line-height: 0.99rem;}
 .sz_all_sss_nr{padding:0rem 0.3rem;background: #fff;}
 .sz_all_sss_nr .van-cell__right-icon{margin-top: 0.2rem;}
+
+
+.hjaddlogin{margin-top:0.8rem; width: 6.22rem;background: #fff;}
+.hjaddlogin h1{font-size:0.48rem;
+font-family:PingFang-SC-Bold,PingFang-SC;
+font-weight:bold;
+color:rgba(68,64,84,1);
+}
+.hjaddlogin p{color: #C7C6CC;font-size:0.28rem;margin-top: 0.24rem;}
+.hjaddlogin p span{color: #576B95;}

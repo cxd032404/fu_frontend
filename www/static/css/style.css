@@ -161,6 +161,7 @@ height:auto;}
 
 .bank_tit{height: 1rem;line-height: 1rem;}
 
+.bg_se{background: #fff !important;}
 .pb_tag_top{height: 0.88rem;line-height: 0.88rem;text-align: center;font-size: 0.36rem;background:rgba(248,248,248,1);}
 .pb_tag_top{position: fixed;;margin-bottom: 0.88rem;z-index: 999;width: 100%;top: 0px;left: 0px;}
 .pb_top_zhanwei{height: 0.88rem;}
@@ -197,6 +198,7 @@ color:rgba(180,179,187,1);font-size: 0.28rem;}
 .baom_btn_nr{padding: 0.3rem;}
 .baom_btn_nr button{border-radius:0.12rem;background: #F47C2D;color: #fff;font-size: 0.32rem;display: block;width: 100%;border: none;height: 0.9rem;line-height: 0.9rem;}
 .zhuanjiainfo h3{font-size: 0.36rem;margin-bottom: 0.34rem;}
+.ybm button{background: #ccc !important;}
 .zhuanjiainfo{padding-top: 0.6rem;}
 .zhuanjiainfo p{font-size:0.28rem;}
 .zhuanjiainfo  img{margin-top: 0.32rem;}
@@ -378,7 +380,7 @@ bottom:40px;left: 50%;transform:translateX(-50%);}
 
 .gongh_form .van-field__control{text-align: right;}
 .gongh_form .van-cell{padding: 0.29rem 0.3rem;border-radius: 0.12rem;margin-bottom: 0.3rem;font-weight: bold;
-font-size: 0.32rem;font-weight: bold;border: 1px solid #fff;}
+font-size: 0.32rem;font-weight: bold;}
 
 .x_qy_gl{margin-top: 0.4rem;margin-bottom: 0.4rem;}
 .x_qy_gl p{font-size: 0.24rem;color:rgba(143,140,152,1);}
@@ -453,14 +455,17 @@ border-radius:0.15rem;
 .wt_list{width: 100%;}
 .bisaishow  .van-popup{border-radius: 0px;}
 
-.wentlist>h1{font-size: 0.48rem;font-weight:bold;color:rgba(68,64,84,1);margin-top: 0.4rem;margin-bottom: 0.4rem;}
+.wentlist>h1{font-size: 0.48rem;font-weight:bold;color:rgba(68,64,84,1);margin-top: 0.5rem;margin-bottom: 0.4rem;}
 .ov_img_a h4{font-size: 0.44rem;font-weight: bold;color:rgba(68,64,84,1);margin-top: 0.12rem;}
 .ov_img_a p{color: #B4B3BB;font-size: 0.24rem;color:rgba(180,179,187,1);margin-top: 0.18rem;}
-.wentlist ul li{width: 50%;height: auto;margin-bottom: 0.1rem;}
+.wentlist ul li{width: 50%;height: auto;margin-bottom: 0.1rem;text-align: center;}
 .wentlist ul li .m_wlist_ix{width: auto;width: auto;padding: 0.15rem;}
-.wentlist ul li .m_wlist_ix .ov_img_a{padding: 0.62rem 0.89rem;background: #fff;border-radius:0.32rem; box-shadow:0px 0px 20px 0px rgba(221,221,221,0.6);}
+.wentlist ul li .m_wlist_ix .ov_img_a{padding: 0.6rem 0rem;background: #fff;border-radius:0.32rem; box-shadow:0px 0px 20px 0px rgba(221,221,221,0.6);}
 .zhanwei{height: 1rem;width: 100%;}
 
+.ov_img_a img{width: 2rem;height: auto;display: inline-block;}
+
+.wentlist2 .ov_img_a img{width: 1rem !important;height: auto;display: inline-block;}
 /* background: url("../images/xiajiantous.png") no-repeat center center ; */
 .bisaishow .van-dropdown-menu__title::after{content: " ";display: inline-block;width: .12rem;height: .12rem;opacity: 1;
 border: 0.03rem solid;border-color:transparent transparent #576B95 #576B95;

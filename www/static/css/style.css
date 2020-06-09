@@ -310,7 +310,7 @@ background-size: cover !important;width:0.3rem;height: 0.3rem;display: inline-bl
 
 .dianz_vant .van-tabs__content{background: #fff;margin-top: 0.34rem;border-radius:0.24rem 0.24rem 0px 0px;}
 .dianz_vant  .van-tabs--line .van-tabs__wrap{height: 0.35rem;}
-.dz_ct_info img{display: inline-block;width: 0.8rem;height: 0.8rem;vertical-align: middle;}
+.dz_ct_info img{display: inline-block;width: 0.8rem;height: 0.8rem;vertical-align: middle;border-radius: 50%;}
 .dz_ct_info span{font-size: 0.32rem;font-weight: bold;margin-left: 0.16rem;}
 .dz_ct_cx span{font-size:0.32rem;color:rgba(23,139,228,1);font-weight: bold;position: relative;top: 0.22rem;}
 
@@ -659,7 +659,7 @@ color:rgba(68,64,84,1);
 line-height:0.48rem;
 margin-top: 0.6rem;margin-bottom: 0.4rem;
 }
-.xianj_img img{width: 0.8rem;height: auto;margin-right: 0.24rem;}
+.xianj_img img{width: 0.8rem;height: auto;margin-right: 0.24rem;border-radius: 50%;}
 
 .xianj_img h4{font-size:0.28rem;
 font-family:PingFangSC-Regular,PingFang SC;
@@ -778,7 +778,7 @@ background:rgba(248,248,248,1);border: none;text-align: center;
 
 .xiangq_cont h1{font-size: 0.3rem;}
 .xiangq_cont p{font-size: 0.28rem;margin-top: 0.2rem;}
-.xiangq_cont h1 img{width: 0.5rem;display: inline-block;vertical-align: middle;margin-right: 0.2rem;}
+.xiangq_cont h1 img{width: 0.5rem;display: inline-block;vertical-align: middle;margin-right: 0.2rem;border-radius: 50%;}
 
 .upload_tishi{color: #ccc;margin-top: 0.2rem;}
 .my_cont_1{position: relative;z-index: 20;}

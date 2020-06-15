@@ -847,3 +847,8 @@ color:rgba(68,64,84,1);
 }
 .hjaddlogin p{color: #C7C6CC;font-size:0.28rem;margin-top: 0.24rem;}
 .hjaddlogin p span{color: #576B95;}
+
+
+.ix_banners_news .swiper-slide{border-radius: 0px;}
+.ix_banners_news{position: relative;}
+.china_bank_name{position: absolute;top: 0.2rem;left: 0.2rem;}

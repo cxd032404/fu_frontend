@@ -5,6 +5,7 @@ html {
     -ms-text-size-adjust: 100%;
     /* 解决IOS默认滑动很卡的情况 */
     -webkit-overflow-scrolling : touch;
+    overflow-scrolling: touch;
     font-size: 100px;
 
 }
@@ -989,9 +990,9 @@ margin: 0.3rem 0;}
 .ix_newbanner .swiper-slide{border-radius: 0px;}
 .ix_newbanner{position: relative;}
 .ix_newbanner .bank_tit{position: absolute;top:0.2rem;left: 0.32rem;z-index: 88;background:rgba(0,0,0,0.3);border-radius: 0.2rem;
-font-size: 0.24rem;font-weight: 500;color:rgba(255,255,255,1); line-height: 0.24rem;height: auto;overflow: hidden;padding: 3px;}
+font-size: 0.24rem;font-weight: 500;color:rgba(255,255,255,1); line-height: 0.24rem;height: auto;overflow: hidden;    padding: 5px 10px;}
 .ix_newbanner .bank_tit img{}
-.ix_newbanner .bank_tit .fl img{width: 0.2rem;top: 0px;display: inline-block;vertical-align: middle;}
+.ix_newbanner .bank_tit .fl img{width: 0.2rem;top: 0px;display: inline-block;vertical-align: middle;position: relative;top: -1px;}
 .notice-swipe {
    height: 40px;
    line-height: 40px;

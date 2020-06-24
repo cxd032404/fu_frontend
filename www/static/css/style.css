@@ -1064,6 +1064,7 @@ position: relative;top:-0.3rem;}
 .myinfo_list_p ul li h1 .fr{font-size: 0.2rem;font-weight: 400;color:rgba(180,179,187,1);}
 .myinfo_list_p ul li p{font-size: 0.24rem;color:rgba(180,179,187,1);margin-top: 0.15rem;}
 .myinfo_list_p ul li{height: auto;overflow: hidden;padding: 0.32rem;border-bottom: 1px solid rgba(248,248,248,1);}
+.vue-waterfall.is-transition img{opacity: 1 !important;}
 
 /* .jx_tag h2{transform:translateY(0.6rem);opacity:0;transition:all 0.6s ease;}
 .jx_tag p{transform:translateY(0.6rem);opacity:0;transition:all 0.6s ease;}

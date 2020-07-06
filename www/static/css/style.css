@@ -201,7 +201,7 @@ color:rgba(180,179,187,1);font-size: 0.28rem;}
 .baom_btn_nr button{border-radius:0.12rem;background: #3678E1;color: #fff;font-size: 0.32rem;display: block;width: 100%;border: none;height: 0.9rem;line-height: 0.9rem;}
 .zhuanjiainfo h3{font-size: 0.36rem;margin-bottom: 0.34rem;}
 .ybm button{background: #ccc !important;}
-.zhuanjiainfo{padding-top: 0.6rem;}
+.zhuanjiainfo{}
 .zhuanjiainfo p{font-size:0.28rem;}
 .zhuanjiainfo  img{margin-top: 0.32rem;}
 
@@ -890,7 +890,9 @@ margin: 0.2rem;
 
 
 .cb_nr input{display: inline-block;text-align: right;color: #8F8C98;}
-.hdplace input{color: #8F8C98;}
+.hdplace input{color: #8F8C98;width: auto;float: right;position: relative;padding: 0px 5px;letter-spacing: -1px;}
+.hdplace span{display: inline-block;height: 0.3rem;overflow: hidden;width: 0.4rem;text-align: right;}
+.hdplace img{float: right;}
 .huodtime span{color: #8F8C98;}
 
 .se_snj{display: inline-block;}
@@ -912,7 +914,7 @@ font-size: 0.28rem;}
 .cb_nr .van-popup--top{top: 2px;}
 .cb_nr .van-overlay{background: none;}
 .hdplace input{display: inline-block;float: left;text-align: right;}
-.hdplace img{float: left;display: inline-block;width: 0.2rem;height: auto;position: relative;top: 0.05rem;}
+.hdplace img{float: right;display: inline-block;width: 0.2rem;height: auto;position: relative;top: 0.05rem;}
 
 
 .huodtime span{width: auto;;height: auto;display: inline-block;}
@@ -1463,6 +1465,8 @@ color:rgba(68,64,84,1);}
 }
 .videobtn{transition:all .5s ease;opacity:0;}
 .andyg{border-radius: 0.12rem;overflow: hidden;}
+
+.cont_video ul li video{width: 100%;height: auto;}
 
 
 /* .club_b_a span{border:2px solid rgba(68,64,84,1);width: 0.32rem;height: 0.32rem;border-radius: 50%;vertical-align: middle;display: inline-block;margin-right: 0.2rem;} */

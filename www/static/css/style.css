@@ -1380,6 +1380,7 @@ border-radius:0px 0px 0px 0.12rem;
 .bm_cg_code h1{font-size: 0.4rem;color: #F18D00;margin-top: 0.3rem;font-weight:500;}
 .bm_cg_code p{font-size: 0.24rem;color: #8F8C98;font-weight:400;margin-top: 0.16rem;margin-bottom: 0.32rem;}
 .bm_cg_code a{color:  #3678E1 ;font-size:0.24rem;font-weight: 600;}
+.bm_cg_code span{color:  #3678E1 ;font-size:0.24rem;font-weight: 600;}
 .bm_cg_code  img{width: 1.8rem;height: auto;display: inline-block;}
 .bm_cg_code_nr{position: absolute;top: 50%;left: 50%;transform:translate(-50%,-50%);}
 .huod_sta_gb{position: absolute;bottom: -1rem;left: 50%;transform:translateX(-50%);}
@@ -1468,7 +1469,7 @@ color:rgba(68,64,84,1);}
 .andyg{border-radius: 0.12rem;overflow: hidden;}
 
 .cont_video ul li video{width: 100%;height: auto;}
-.act_qd_list {height: 80vh;overflow-y: scroll;padding-right: 0.1rem;}
+/* .act_qd_list {height: 80vh;overflow-y: scroll;padding-right: 0.1rem;} */
 
 
 /* .club_b_a span{border:2px solid rgba(68,64,84,1);width: 0.32rem;height: 0.32rem;border-radius: 50%;vertical-align: middle;display: inline-block;margin-right: 0.2rem;} */

@@ -890,8 +890,9 @@ margin: 0.2rem;
 
 
 .cb_nr input{display: inline-block;text-align: right;color: #8F8C98;}
-.hdplace input{color: #8F8C98;width: auto;float: right;position: relative;padding: 0px 5px;letter-spacing: -1px;}
-.hdplace span{display: inline-block;height: 0.3rem;overflow: hidden;width: 0.4rem;text-align: right;}
+.hdplace{width: auto;float: right;width: 75%;}
+.hdplace input{color: #8F8C98;width: auto;position: relative;padding: 0px !important;float: right;width: 89%;}
+.hdplace span{display: inline-block;height: 0.3rem;overflow: hidden;width: 0.4rem;text-align: right;float: right;}
 .hdplace img{float: right;}
 .huodtime span{color: #8F8C98;}
 
@@ -1467,6 +1468,7 @@ color:rgba(68,64,84,1);}
 .andyg{border-radius: 0.12rem;overflow: hidden;}
 
 .cont_video ul li video{width: 100%;height: auto;}
+.act_qd_list {height: 80vh;overflow-y: scroll;padding-right: 0.1rem;}
 
 
 /* .club_b_a span{border:2px solid rgba(68,64,84,1);width: 0.32rem;height: 0.32rem;border-radius: 50%;vertical-align: middle;display: inline-block;margin-right: 0.2rem;} */

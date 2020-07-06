@@ -1113,7 +1113,7 @@ position: absolute;top: 0.7rem;right: -0.5rem;
 .jlb_ybm_a{font-size:0.36rem;font-weight:bold;color:rgba(68,64,84,1);padding-bottom: 0.42rem;border-bottom: 1px solid rgba(235,235,235,1);
 width: 100%;padding-top: 0.6rem;}
 .jlb_ybm_a img{width: 0.36rem;height: 0.36rem;border-radius: 50%;display: inline-block;vertical-align: middle;margin-right: 0.2rem;}
-.jlb_ybm_b{padding: 0.6rem 0px;}
+.jlb_ybm_b{padding: 0.6rem 0px;padding-top: 0.4rem;}
 .jlb_ybm_b span img{width: 0.3rem;height: auto;position:relative;top: 0.05rem;}
 .jlb_ybm_b span {display: inline-block;width: 0.4rem;text-align: center;}
 

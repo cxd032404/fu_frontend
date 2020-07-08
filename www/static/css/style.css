@@ -173,7 +173,7 @@ height:auto;}
 .bank_tit .fr img{width: 0.37rem;height: auto;display: inline-block;position:relative;top: 3px;margin-right: 0px;}
 .wenti_fenlei ul li{float:left;position: relative;}
 .wenti_top_img{height: auto;overflow: hidden;}
-.wenti_top_img p{font-size:0.36rem;font-weight: bold;color:rgba(68,64,84,1);margin-bottom: 0.4rem;margin-top: 0.8rem;}
+.wenti_top_img p{font-size:0.36rem;font-weight: bold;color:rgba(68,64,84,1);margin-bottom: 0.4rem;margin-top: 0.6rem;}
 .wenti_fenlei{background: #fff;border-radius: 12px;box-shadow:0px 10px 20px 0px rgba(238,238,238,1);clear: both;padding: 0.3rem 0px;}
 .wenti_fenlei ul li{text-align: center;width: 25%;text-align: center;padding: 0.3rem 0px;}
 .wenti_fenlei ul li img{width: 0.72rem;height: auto;margin: 0px auto;margin-bottom: 0.24rem;}
@@ -1119,7 +1119,8 @@ position: absolute;top: 0.7rem;right: -0.5rem;
 width: 100%;padding-top: 0.6rem;}
 .jlb_ybm_a img{width: 0.36rem;height: 0.36rem;border-radius: 50%;display: inline-block;vertical-align: middle;margin-right: 0.2rem;}
 .jlb_ybm_b{padding: 0.6rem 0px;padding-top: 0.4rem;}
-.jlb_ybm_b span img{width: 0.3rem;height: auto;position:relative;top: 0.05rem;}
+.jlb_ybm_b span img{width: 0.3rem;height: auto;}
+.jlb_ybm_b p:first-child span img{position:relative;top: 0.05rem;}
 .jlb_ybm_b span {display: inline-block;width: 0.4rem;text-align: center;}
 
 .jlb_ybm_b span.ffs img{width: 0.22rem;height: auto;margin-left: 0.05rem;}

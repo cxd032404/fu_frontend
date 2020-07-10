@@ -1028,7 +1028,7 @@ border-radius:0.12rem;box-shadow:0px 0.04rem 0.2rem 0px rgba(238,238,238,1);}
 .act_gl_se_active{height: 2rem;transition: 0.5s ease;opacity: 1;overflow-y: scroll;}
 .club_bm_pepeo{background: #fff;}
 .club_bm_pepeo ul li{height: auto;border-bottom: 1px solid #EBEBEB;padding: 0.3rem 0px;;}
-.club_bm_pepeo ul li img{display: inline-block;margin: 0px 0.2rem;width: 0.8rem;height: auto;vertical-align: middle;}
+.club_bm_pepeo ul li img{display: inline-block;margin: 0px 0.2rem;width: 0.8rem;height: auto;vertical-align: middle;border-radius: 50%;}
 .club_bm_pepeo ul li span{display: inline-block;}
 
 
@@ -1517,7 +1517,11 @@ color:rgba(68,64,84,1);}
 .wt_ys_btn div{display: inline-block;width: 2.6rem;height: 0.8rem;line-height: 0.8rem;text-align: center;border-radius: 0.4rem;
 font-size: 0.32rem;font-weight: bold;letter-spacing: 0.02rem;color: #000;background:  #F3F3F3;}
 .wt_ys_btn div:last-child{background: #3678E1;color: #fff;}
-
+/* 健步走 */
+.jianbuz_ix{width: 6.4rem;text-align: center;margin:0px auto;margin-top: 0.52rem;padding: 0.88rem 0rem;text-align: center;}
+.jianbuz_ix img{width: 2.8rem;height: auto;margin-bottom: 0.4rem;display: inline-block;}
+.jianbuz_ix p{font-size:0.28rem;font-weight:400;
+color:rgba(68,64,84,1);line-height: 0.4rem;}
 /* .qd_lt_c button:hover{background:#000;transition:all .2s ease;} */
 /* .act_qd_list {height: 80vh;overflow-y: scroll;padding-right: 0.1rem;} */
 

@@ -1583,8 +1583,15 @@ color:rgba(68,64,84,1);line-height: 0.4rem;}
 .contactus_bom {position: fixed;bottom: 0.1rem;left: 0px;width: 100%;}
 .contactus_bom h1{font-size: 0.28rem;color: #8F8C98;}
 .contactus_bom p{font-size: 0.22rem;color: #B4B3BB;margin-bottom: 0.3rem;margin-top: 0.15rem;}
-
 .concats_rt img{display: inline-block;margin-left:0.15rem;width: 0.3rem;height: auto;position: relative;top: 0.08rem;}
+
+.pb_all_info{height: 100vh;text-align: center;}
+.pb_all_info_nr{position: relative;top: 45%;transform: translateY(-50%);}
+.pb_all_info_nr img{width: 4rem;height: auto;display: inline-block;}
+.pb_all_info_nr p{font-size: .28rem;font-weight: 500;margin-top: 0.7rem;margin-bottom: 0.4rem;color: #8F8C98;}
+.pb_all_info_nr button{padding: 0.25rem 1.27rem;background:#3678E1;color: #fff;font-size: 0.32rem;font-weight: 500;border-radius: 0.12rem;border: none;}
+
+
 /* .qd_lt_c button:hover{background:#000;transition:all .2s ease;} */
 /* .act_qd_list {height: 80vh;overflow-y: scroll;padding-right: 0.1rem;} */
 

@@ -810,11 +810,11 @@ font-family:PingFangSC-Medium,PingFang SC;
 font-weight:500;
 color:rgba(68,64,84,1);margin-bottom: 0.24rem;
 line-height:0.4rem;}
-.pos_m_b button{width:1.8rem;
-height:0.6rem;line-height: 0.6rem;
+.pos_m_b button{width:1.5rem;
+height:0.5rem;line-height: 0.5rem;
 border-radius:0.3rem;
 border:1px solid rgba(143,140,152,1);
-font-size:0.28rem;
+font-size:0.24rem;
 font-family:PingFang-SC-Medium,PingFang-SC;
 font-weight:500;
 color:rgba(124,121,135,1);
@@ -831,6 +831,7 @@ line-height:0.28rem;
   color:rgba(68,64,84,1);border-bottom: 1px solid rgba(248,248,248,1);
   text-shadow:0px 0.04rem 0.2rem rgba(238,238,238,1);
 }
+.my_cont_2 ul li:last-child{border-bottom: none;}
 .my_cont_2 {border-radius: 0.12rem;top: -0.32rem;position: relative;z-index: 22;background: #fff;
 box-shadow:0px 0.04rem 0.2rem 0px rgba(238,238,238,1);
 }
@@ -1590,7 +1591,7 @@ color:rgba(68,64,84,1);line-height: 0.4rem;}
 .pb_all_info_nr img{width: 4rem;height: auto;display: inline-block;}
 .pb_all_info_nr p{font-size: .28rem;font-weight: 500;margin-top: 0.7rem;margin-bottom: 0.4rem;color: #8F8C98;}
 .pb_all_info_nr button{padding: 0.25rem 1.27rem;background:#3678E1;color: #fff;font-size: 0.32rem;font-weight: 500;border-radius: 0.12rem;border: none;}
-
+.add_n_zc strong{font-weight: bold;}
 
 /* .qd_lt_c button:hover{background:#000;transition:all .2s ease;} */
 /* .act_qd_list {height: 80vh;overflow-y: scroll;padding-right: 0.1rem;} */

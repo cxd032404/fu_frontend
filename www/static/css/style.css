@@ -1133,7 +1133,7 @@ width: 100%;padding-top: 0.6rem;}
 .jlb_ybm_b span img{width: 0.3rem;height: auto;}
 .jlb_ybm_b p:first-child span img{position:relative;top: 0.05rem;}
 .jlb_ybm_b span {display: inline-block;width: 0.4rem;text-align: center;}
-
+.jlb_ybm_b h1{margin-bottom: 0.2rem;}
 .jlb_ybm_b span.ffs img{width: 0.22rem;height: auto;margin-left: 0.05rem;}
 
 .jlb_ybm_b p{font-size:0.28rem;font-weight:400;color:rgba(143,140,152,1);margin: 0.1rem 0px;}
@@ -1586,7 +1586,9 @@ color:rgba(68,64,84,1);line-height: 0.4rem;}
 .contactus_bom p{font-size: 0.22rem;color: #B4B3BB;margin-bottom: 0.3rem;margin-top: 0.15rem;}
 .concats_rt img{display: inline-block;margin-left:0.15rem;width: 0.3rem;height: auto;position: relative;top: 0.08rem;}
 
+
 .pb_all_info{height: 100vh;text-align: center;}
+.pb_all_info_mber{height: 80vh;}
 .pb_all_info_nr{position: relative;top: 45%;transform: translateY(-50%);}
 .pb_all_info_nr img{width: 4rem;height: auto;display: inline-block;}
 .pb_all_info_nr p{font-size: .28rem;font-weight: 500;margin-top: 0.7rem;margin-bottom: 0.4rem;color: #8F8C98;}

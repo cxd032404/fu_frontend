@@ -1485,7 +1485,7 @@ color:rgba(68,64,84,1);}
 .revw_btm_a img{position: relative;top: -0.02rem;margin-right: 0.1rem;}
 .revw_btm_a{height: auto;overflow: hidden;padding: 0.1rem 0px;}
 .revw_btm_b{margin-top: 0.22rem;}
-.rv_a img{width: 0.4rem;display: inline-block;vertical-align: middle;}
+.rv_a img{width: 0.4rem;display: inline-block;vertical-align: middle;border-radius: 50%;}
 .rv_b img{width: 0.3rem;height: auto;vertical-align: middle;display: inline-block;}
 
 

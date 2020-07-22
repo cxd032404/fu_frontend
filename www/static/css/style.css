@@ -1005,6 +1005,7 @@ width: 100%;}
 .huodongmiaos .van-field__body{font-size: 0.28rem;}
 .huodongname input{font-size:0.32rem;
 font-family:PingFangSC-Regular,PingFang SC;
+width:88%;
 font-weight:400;
 }
 .cb_ac_list ul li{height:auto;margin-top: 0.4rem;background: #fff;padding: 0.44rem 0.32rem;
@@ -1483,8 +1484,8 @@ color:rgba(68,64,84,1);}
 .revw_ship video{width: 100%;}
 .revw_ship img{width: 100%;}
 
-.revw_top{position: absolute;top: 0px;left: 0px;width: 100%;z-index: 99;background: rgba(0,0,0,0.5);}
-.revw_foot{position: absolute;bottom: 0px;width: 100%;left: 0px;color: #fff;z-index: 99;background: rgba(0,0,0,0.5);}
+.revw_top{position: absolute;top: 0px;left: 0px;width: 100%;z-index: 99;}
+.revw_foot{position: absolute;bottom: 0px;width: 100%;left: 0px;color: #fff;z-index: 99;}
 
 .revw_ft_nr{padding: 0.7rem 0.4rem;}
 .revw_btm_a img{position: relative;top: -0.02rem;margin-right: 0.1rem;}
@@ -1605,6 +1606,12 @@ color:rgba(68,64,84,1);line-height: 0.4rem;}
 border-radius:0.12rem;margin-top: 0.4rem;}
 .wode_cont .van-cell{padding: 0.32rem 0px;}
 .wode_toux img{width: 2rem;height: 2rem;border-radius: 50%;margin: 0px auto;margin-top: 0.6rem;margin-bottom: 1rem;}
+
+.revw_ship  .swiper-pagination{bottom: auto;transform:translateX(-50%);z-index: 666;
+  top: .65rem;right: -.2rem;color: #fff;
+}
+.revw_ship  .swiper-pagination-bullet{width:0.2rem;height:0.02rem;background:rgba(255,255,255,0.5) ;opacity: 1 !important;}
+.revw_ship .swiper-pagination-bullet-active{background:rgba(255,255,255,1);}
 /* .qd_lt_c button:hover{background:#000;transition:all .2s ease;} */
 /* .act_qd_list {height: 80vh;overflow-y: scroll;padding-right: 0.1rem;} */
 

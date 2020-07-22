@@ -1310,7 +1310,9 @@ border-radius: 0.1rem;}
 box-shadow:0px 0.04rem 0.2rem 0px rgba(36,143,255,0.4);}
 
 .club_a_join{margin: 0.3rem auto;background: #fff;padding: 0.6rem 0;}
-.cb_sa{width:0.7rem;height: auto;margin-right:0.25rem; margin-left: 0.3rem;}
+.cb_sa{width:0.7rem;height: auto;margin-right:0.25rem; margin-left: 0.3rem;border-radius: 50%;width: 0.7rem;height: 0.7rem;overflow: hidden;
+position: relative;}
+.cb_sa img{width: 1rem;height: auto;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
 .cb_sb h1{font-size:0.32rem;font-weight:400;color:rgba(68,64,84,1);}
 .cb_sb p{font-size: 0.24rem;color:#B4B3BB;margin-top: 0.07rem;}
 .cb_sb p em{color: #3678E1;}

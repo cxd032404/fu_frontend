@@ -995,7 +995,12 @@ border-radius:0.12rem;}
 .huodongname{margin: 0.15rem 0px;}
 
 .more_sz_cont  .van-cell{padding:0rem;}
-.huodongmiaos{margin-top: 0.44rem;}
+.huodongmiaos{margin-top: 0.44rem;border:1px solid rgba(221,221,221,1);height: auto;padding:0.2rem 0.32rem;}
+
+.huodongmiaos textarea{padding: 0px;font-size: 0.28rem;border: none;height: 2.19rem;
+width: 100%;}
+
+
 .huodongmiaos .van-cell{padding: 0px;border:1px solid rgba(221,221,221,1);height: 3.19rem;padding:0.2rem 0.32rem;}
 .huodongmiaos .van-field__body{font-size: 0.28rem;}
 .huodongname input{font-size:0.32rem;

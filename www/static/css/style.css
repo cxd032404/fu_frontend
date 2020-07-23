@@ -1299,7 +1299,8 @@ text-align: center;line-height: 0.5rem;
 .yuefen .swiper-prev{border: none;outline: none !important;}
 
 .actjis{padding: 0px 0.4rem;width: auto;}
-.xuhui_lt{width: 0.72rem;height: 0.72rem;border-radius: 50%;overflow: hidden;}
+.xuhui_lt{width: 0.72rem;height: 0.72rem;border-radius: 50%;overflow: hidden;position: relative;}
+.xuhui_lt img{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
 .xuhui_rt{margin-left: 0.2rem;}
 .actjis ul li{background:  #3678E1 ;color: #fff;padding: 0.36rem 0.3rem;height: 0.82rem;position: relative;
   width: 85%;

@@ -1,9 +1,10 @@
 <template lang="html">
-  <div class="container-fluid ">
+  <div class="container-fluid " >
     <div class="pb_tag_top">
       <span><a href="javascript:history.go(-1)" class="back"><img src="@/assets/images/arrow-lift.png"></a></span>
-        {{pagename.page_name}}
+          {{pagename.page_name}}
     </div>
+    <div class="pb_top_zhanwei"></div>
 
       <div class="rongyulist_top container-fluid">
         <ul>
@@ -13,15 +14,12 @@
 
       <div class="rongyu_content container">
         <div class="rongyu_box">
+          <van-list  v-model="loading" :immediate-check="false" :offset="100" :finished="finished"
+            finished-text="没有更多内容了" @load="loadMore" ref="list_all">
             <ul>
-            <van-list
-               v-model="loading"
-               :finished="finished"
-               finished-text="没有更多了"
-               @load="onLoad"
-              >
-              <li v-for="(item,index) in list_all"  :key="index" @click="honor_detail(item.post_id)">
-                <div class="rongyu_nr">
+              <!-- <li v-for="(item,index) in list_all"   :key="index" @click="honordetail(item.post_id)"  class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s"> -->
+              <li v-for="(item,index) in list_all"   :key="index" @click="honordetail(item.post_id)">
+                <div class="rongyu_nr" >
                     <div class="fl ryu_lt">
                       <h2>{{item.title}}</h2>
                       <p>{{item.create_time}}</p>
@@ -31,9 +29,11 @@
                     </div>
                 </div>
               </li>
-              </van-list>
-
             </ul>
+
+          </van-list>
+
+
         </div>
       </div>
 
@@ -44,61 +44,71 @@
 </template>
 
 <script>
+import {WOW} from 'wowjs';
 export default {
+  //注册子组件
+
   data() {
     return {
+
+      mapaddress:localStorage.getItem("mapaddress"),
       nav_list:[],
       current:0,
       listArr_list:[],
       list_all:[],
       pagename:[],
-      pagesize:1,
+      index:0,
+
+      //下拉加载
       loading: false,
       finished: false,
+      pagesize:3,
       pageNum:1,
-
+      totalpage:"",
 
     }
   },
   created() {
     this.get_rongyu_list()
   },
+  mounted(){
+
+ },
+ watch: {
+   nav_list:function(){
+       this.$nextTick(function(){
+         new WOW({live: false,offset:50,}).init();
+         // alert(1);
+       });
+   }
+ },
   methods:{
-    //下拉刷新
-    onLoad() {
-      console.log("下拉加载");
-
-      setTimeout(() => {
-        for (let pageNum = 1; pageNum < this.count; pageNum++) {
-          this.list_all=this.list_all.concat(this.listArr_list[0].data.data);
-        }
 
 
-        // 加载状态结束
-        this.loading = false;
-
-        // 数据全部加载完成
-        if (this.list_all.length >= this.count) {
-          this.finished = true;
-        }
-      }, 1000);
-
-    },
-
-
-
-    honor_detail(post_id){
+    honordetail(post_id){
          this.$router.push({path:'honor_details', query: {id: post_id}})
     },
     nav_click(index){
-        this.current=index;
 
-        console.log(this.listArr_list[index].data.data);
-        this.list_all=this.listArr_list[index].data.data;
+
+        this.pageNum=1;
+        this.list_all=[];
+        this.current=index;
+        this.index=index;
+        this.loading = false;
+        this.finished = false;
+        this.get_rongyu_list();
+
+
+
 
     },
     //
     get_rongyu_list(){
+
+
+      //上拉刷新初始化
+      this.loading = true;
       var $this=this;
       var company_id =  localStorage.getItem("company_id");
       var params={
@@ -107,13 +117,13 @@ export default {
         page_size:this.pagesize,
         page:this.pageNum,
       }
-      var parm = JSON.stringify(params);
+      console.log(params);
       var qs = require('qs');
-      let url = this.api.userApi.rongyu_list
-      this.axios.post(url+'/'+params.company+'/'+params.page_sign,qs.stringify({params:parm}),{headers:{'Accept': 'application/json','UserToken': window.localStorage.getItem("token")}})
+      var parm = JSON.stringify(params);
+      let url = this.api.userApi.get_zp
+      this.axios.post(url+'/'+params.company+'/'+params.page_sign,qs.stringify({params:parm}),)
       .then((res) => {
-
-        this.count=res.data.data.pageElementList;
+        console.log(res.data.data.pageElementList)
         this.nav_list=res.data.data.pageElementList.honor_nav.detail.jump_urls
         this.pagename=res.data.data.pageInfo;
 
@@ -125,23 +135,42 @@ export default {
             listArr.push(res.data.data.pageElementList[objArr[i]])
           }
         }
-
-
-        console.log(listArr);
         this.listArr_list=listArr;
         console.log("数据部分");
-        console.log(  this.listArr_list);
-        // this.list_all=this.list_all.concat(this.listArr_list[0].data.data);
-        this.list_all=this.listArr_list[0].data.data;
-        this.count=this.listArr_list[0].data.count;
+        console.log(this.listArr_list[this.index].data.total_page);
+        this.totalpage=this.listArr_list[this.index].data.total_page;
+        // this.list_all=this.listArr_list[this.index].data.data;
+        this.list_all=this.list_all.concat(this.listArr_list[this.index].data.data);
 
+        console.log("数据部分list_all");
+        console.log(this.list_all);
+        this.loading = false;
+        this.finished = false;
 
-
+        // console.log(res.data.data.pageElementList.honor_menu1.data.data.length);
+        if(res.data.data.pageElementList.honor_menu1.data.data.length==0)
+        {
+            this.finished = true;
+        }
 
       }).catch((error) => {
         console.warn(error)
       })
+
     },
+
+
+    loadMore(){
+      this.pageNum++;
+      console.log(this.pageNum);
+      this.loading = true;
+      this.get_rongyu_list();
+      // 加载状态结束
+
+    },
+
+
+
 
   }
 }

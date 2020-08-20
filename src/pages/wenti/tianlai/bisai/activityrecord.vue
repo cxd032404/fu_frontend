@@ -1,12 +1,25 @@
 <template lang="html">
   <div class="container-fulid">
       <!-- tag箭头 -->
-      <div class="pb_tag_top">
+      <div class="pb_tag_top bg_se">
         <span><a href="javascript:history.go(-1)" class="back"><img src="@/assets/images/arrow-lift.png"></a></span>
           活动记录
       </div>
+      <div class="pb_top_zhanwei"></div>
 
-      <div class="container jilu_list"  v-show="jiluall">
+
+      <!-- 空白信息通用版 -->
+      <div class="pb_all_info" v-if="this.countshow==0">
+        <div class="pb_all_info_nr">
+          <img src="@/assets/images/jilu.png">
+          <p>啊喔！这里还没有任务记录哦～</p>
+          <router-link to="activity">
+          <button  type="button" name="button">去看看</button>
+          </router-link>
+        </div>
+      </div>
+
+      <div class="container jilu_list"  v-else>
           <div class="jilu_time">{{list_record.create_time}}</div>
           <div class="jilu_box">
             <div class="jilu_nr">
@@ -16,9 +29,7 @@
                   </div>
                   <div class="fr jilu_btn">
                       <ul>
-                        <li @click="vx_share()">
-                           <img src="@/assets/images/share_activety_icon.png" alt="">分享
-                        </li>
+
                         <li @click="delete_hd()">
                           <img src="@/assets/images/delete_activety_icon.png">删除
                         </li>
@@ -68,7 +79,7 @@
                       <img src="@/assets/images/weixin_share_icon.png">
                       <p>微信好友</p>
                     </li>
-                    <li>
+                    <li @click="fenx_pyq()">
                       <img src="@/assets/images/mate_share_icon.png">
                       <p>朋友圈</p>
                     </li>
@@ -88,8 +99,9 @@
 export default {
   data(){
     return{
+      countshow:'',
       share_show:false,
-      jiluall:false,
+      jiluall:true,
       list_record:[],
       list_souce_data:[],
       post_id:"",
@@ -108,19 +120,19 @@ export default {
     }
   },
   created() {
-      this.getrecord()
+      this.getrecord();
    },
 // get_activityrecord
   methods: {
+
+
     // 分享
     activeshare(){
       this.$router.push({
           name:'activeshare'
         })
     },
-    vx_share(){
-        this.share_show = true;
-    },
+
     copy_close(){
       this.share_show = false;
     },
@@ -133,13 +145,26 @@ export default {
        console.log(param.post_id);
       var qs = require('qs');
       let url = this.api.userApi.delete_huodong
-      this.axios.post(url,qs.stringify(param),{headers:{'Accept': 'application/json','UserToken': window.localStorage.getItem("token")}})
+      this.axios.post(url,qs.stringify(param),)
       .then((res) => {
         // console.log("删除");
         // console.log(res.data);
         // // this.newkey.splice(msi,1);
+        this.$toast(res.data.msg);
+
+        setTimeout(()=>{
+        // this.data = this.data.concat(this.data)
+        location.reload();
+          // console.log(this.data.length)
+        },1000)
+
+
+
+      // this.$toast(res.data.msg);
+      //
+      // this.getrecord();
         if(res.data.code==400){
-          this.$toast(res.data.msg);
+
         }
         else{
           this.$toast(res.data.msg);
@@ -150,27 +175,31 @@ export default {
       })
     },
     getrecord(){
+      var company_id =  localStorage.getItem("company_id");
       var params={
+          company:company_id,
           post_id:this.post_id,
           page:1,
+          page_sign:this.$route.name,
           pagesize:5,
       }
       var qs = require('qs');
       let url = this.api.userApi.get_activityrecord
-      this.axios.post(url,qs.stringify(params),{headers:{'Accept': 'application/json','UserToken': window.localStorage.getItem("token")}})
+      var parm = JSON.stringify(params);
+      this.axios.post(url,qs.stringify({params:parm}),)
       .then((res) => {
-        var count_hd = res.data.data.pageElementList.activity_log_detail.data.count;
+        console.log(res);
 
+        var count_hd = res.data.data.pageElementList.activity_log_detail.data.count;
+        this.countshow=count_hd;
         if(count_hd==0){
-          this.$toast("暂无活动数据");
+          // this.$toast("暂无活动数据");
+          this.jiluall=false
 
         }
         else{
-
-          this.jiluall=true
           this.list_record=res.data.data.pageElementList.activity_log_detail.data.data[0];
           this.list_souce_data=res.data.data.pageElementList.activity_log_detail.data.data[0].source;
-
           this.post_id=res.data.data.pageElementList.activity_log_detail.data.data[0].post_id;
 
         }

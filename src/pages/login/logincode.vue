@@ -1,18 +1,34 @@
 <template>
-    <div class="container-fluid">
+    <div class="container-fluid jingpin_bg">
 
         <div class="pb_tag_top">
           <span><a href="javascript:history.go(-1)" class="back"><img src="@/assets/images/arrow-lift.png"></a></span>
-            会员登录
+            员工登录
         </div>
+          <div class="pb_top_zhanwei"></div>
+
+           <!-- <div class="container">
+             测试CODE:{{this.th_code}}
+           </div> -->
+
+          <div class="container hjaddlogin">
+              <h1>短信验证码登录</h1>
+              <p>没有关联企业？<span @click="shanyibu()">立即绑定</span></p>
+          </div>
+
+          <!-- {{this.nickname}}
+          <img :src="this.userimg" alt=""> -->
 
         <div class="content_login">
           <div class="content ">
-              <van-field v-model="mobile"   placeholder="请输入11位手机号"    clearable />
-              <van-field   v-model="yzm" center clearable placeholder="请输入6位验证码" >
+              <van-field v-model="mobile"    placeholder="请输入11位手机号"    clearable  oninput="if(value.length>11)value=value.slice(0,11)" />
+              <van-field   v-model="yzm" center  placeholder="请输入6位验证码" oninput="if(value.length>6)value=value.slice(0,6)" >
                <van-button :disabled="flag" slot="button" size="small" type="primary" @click="sendCode">{{ buttonmsg }}</van-button>
                </van-field>
-               <van-button type="primary" :loading="loading" loading-text="登录..." size="large" :disabled="zhud" @click="login">登录</van-button>
+
+               <van-button  v-if="this.mobile == '' ||  this.yzm == '' "   type="primary" :loading="loading" loading-text="登录..." size="large" :disabled="zhud" >登录</van-button>
+               <van-button v-else class="loginactive" type="primary" :loading="loading" loading-text="登录..." size="large" :disabled="zhud" @click="login">登录</van-button>
+
           </div>
         </div>
 
@@ -36,16 +52,77 @@ export default {
             zhud:false,
             loading:false,
             companyuser_id:'',
+            code:'',
+            th_code: localStorage.getItem("code"),
+
+            nickname:localStorage.getItem("nickname"),
+            user_img:localStorage.getItem("userimg"),
+
+
 
         }
     },
+    watch: {
+				mobile: function(val){
+					this.mobile = val.replace(/\D/g, '')
+        },
+        yzm: function(val){
+					this.yzm = val.replace(/\D/g, '')
+        }
+			},
+
     computed: {
     },
     created(){
-        this.reallR()
+        // this.reallR()
+        this.cleartoken();
 
     },
+    mounted() {
+      // var code = this.$route.query.code;
+      // localStorage.setItem("code",code);
+      this.th_code = localStorage.getItem("code")
+
+      this.get_token();
+
+    },
+
+
+    activated() {
+      this.buttonmsg='获取验证码'
+      // this.yzm="1"
+     },
+     deactivated(){
+         // alert(1);
+         this.buttonmsg='获取验证码'
+         // this.yzm="1"
+     },
+     destroyed() {
+       // clear.sendCode();
+       window.removeEventListener('resize', this.sendCode)
+     },
     methods: {
+
+      get_token(){
+        let url = this.api.userApi.getusertoken
+        var qs = require('qs');
+        this.axios.post(url+'?'+'code='+this.th_code,).then((res) => {
+            if(res.data.code==200){
+               console.log(res.data.data);
+               localStorage.setItem("usertoken", res.data.data.user_token);
+               localStorage.setItem("nickname", res.data.data.user_info.nick_name);
+               localStorage.setItem("userimg", res.data.data.user_info.user_img);
+               console.log(res.data.data.user_info.nick_name)
+            }else{
+                // this.$toast(res.data.msg);
+            }
+        })
+      },
+
+      shanyibu(){
+        this.$router.replace('/loginhome');
+      },
+
       // getluyoucsnhu(){
       //   var  Params={
       //     company_id:this.$route.params.company_id,
@@ -62,7 +139,14 @@ export default {
         //        name:'index'
         //      })
         // },
-        sendCode () {
+
+        // api.staffhome.cn/user/wechatCodeLogin?code=0015dDqB1u44ya0bQWsB1qdDqB15dDqs
+
+      // 清楚token
+      cleartoken(){
+        // localStorage.removeItem('token');
+      },
+      sendCode () {
             let time = 60
             let timer
             timer = setInterval(()=>{
@@ -70,7 +154,7 @@ export default {
                 if(time === 0){
                     clearInterval(timer)
                     this.flag=false
-                    this.buttonmsg = '点击发送验证码'
+                    this.buttonmsg = '获取验证码'
                     return
                 }
                 this.flag = true
@@ -78,26 +162,23 @@ export default {
             },1000)
             this.getCode()
         },
-          getCode () {
+        getCode () {
               let url = this.api.userApi.getsendCode
               var  Params={
                 mobile:this.mobile,
-
               }
               var qs = require('qs');
               this.axios.post(url,qs.stringify(Params),).then((res) => {
                  console.log(res);
-                  if(res.success == false){
-                      this.$toast('验证码错误，请填写验证码!')
+                  if(res.data.code==400){
+                      this.$toast(res.data.msg);
                   }else{
-                      // this.$toast('验证码输入完成')
                       return
                       // this.adminCode = res.data.code
                       // console.log(this.adminCode)
                   }
               })
         },
-
         login () {
             if (this.mobile === '') {
                 this.$toast('请输入手机号！')
@@ -116,16 +197,23 @@ export default {
             this.reallR()
         },
 
-
         reallR(){
           this.zhud=false
           this.loading=false
           var $this=this;
+          // localStorage.setItem("companyuser_id", this.$route.params.companyuser_id);
+          if(this.th_code==undefined){
+              this.th_code=""
+           }
           var  Params={
+            code:this.th_code,
             mobile:this.mobile,
-            code:this.yzm,
-            companyuser_id:this.$route.params.companyuser_id,
+            logincode:this.yzm,
+            // companyuser_id:this.$route.params.companyuser_id,
+            companyuser_id:localStorage.getItem("companyuser_id"),
           }
+
+          console.log(Params);
           var qs = require('qs');
           let url = this.api.userApi.getLogin
           this.axios.post(url,qs.stringify(Params),)
@@ -135,12 +223,16 @@ export default {
                 this.zhud=false
                 this.loading=false
                 localStorage.setItem("token", res.data.data.user_token);
-                this.$toast("登录成功!");
+                localStorage.setItem("company_id", res.data.data.user_info.company_id);
 
+                this.$toast("登录成功!");
+                localStorage.setItem("companyuser_id",'');
                 setTimeout(()=>{
                 this.$router.replace('/');
                 },1500)
-
+              }
+              else if(res.data.code==400){
+                  this.$toast(res.data.msg);
               }
               else{
 

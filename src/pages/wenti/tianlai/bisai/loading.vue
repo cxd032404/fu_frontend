@@ -3,7 +3,7 @@
 		<div class="spinner">
 		  <div class="double-bounce1"></div>
 		  <div class="double-bounce2"></div>
-		  加载中...
+		  <span>加载中...</span>
 		</div>
 	</div>
 </template>
@@ -44,10 +44,10 @@
 	filter:alpha(opacity=100);
 }
 .spinner {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   text-align: center;
-  line-height: 120px;
+  line-height: 100px;
 
   position: absolute;
   left: 50%;
@@ -60,13 +60,14 @@
   white-space: nowrap;
   overflow: hidden;
 }
+.spinner span{color: #fff !important;position: absolute;left: 50%;transform: translateX(-50%);}
 
 .double-bounce1, .double-bounce2 {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #0bba45;
-  color: #fff;
+  background-color: #3678E1;
+  color: #fff !important;
   opacity: 0.6;
   position: absolute;
   top: 0;

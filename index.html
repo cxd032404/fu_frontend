@@ -3,6 +3,7 @@
 <head lang="en">
 <meta charset="UTF-8">
 <link href="/favicon.ico" rel="shortcut icon">
+<!-- <link rel="stylesheet" href="http://www.kuitao8.com/demo/20150731/1/20150731050415197/animate.min.css" /> -->
 <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width"   />
 
 
@@ -10,12 +11,23 @@
 <title>文体之窗</title>
 </head>
   <body  style="visibility:hidden;">
-    <div id="app"></div>
+    <div id="app">
+    </div>
     <!-- built files will be auto injected -->
 
 
   </body>
+  <!-- //先在vue的index.html里面引入腾讯地图包 -->
+<script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=7YMBZ-22PWS-GMAOG-6OKK7-73XDF-BHFWC"></script>
+<script src="https://3gimg.qq.com/lightmap/components/geolocation/geolocation.min.js"></script>
+
+
+
+  <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
   <script type="text/javascript">
+
+
+
   (function (doc, win) {
     var docEl = doc.documentElement,
       bodys = document.getElementsByTagName('body')[0],

@@ -1,6 +1,12 @@
 <template>
   <div id="app">
-    <router-view/>
+    <!-- <router-view/> -->
+
+    <keep-alive>
+      <router-view  ref="routerView" v-if="$route.meta.keepAlive"></router-view>
+    </keep-alive>
+    <router-view ref="routerView" v-if="!$route.meta.keepAlive"></router-view>
+
 
     <div class="navbar" v-if="flag">
       <div class="navbar__fixed">
@@ -81,9 +87,6 @@
         this.$router.push({
           path: path,
         });
-
-
-
 
         // this.$router.push({
         //   path: path,

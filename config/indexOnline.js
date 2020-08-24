@@ -19,14 +19,14 @@ module.exports = {
         }
       },
 
-      '/login': {
-        // target: 'http://api.bestdo.cn',
-        target: 'http://api.staffhome.cn',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/login/': ''
-        }
-      }
+      // '/login': {
+      //   // target: 'http://api.bestdo.cn',
+      //   target: 'http://api.staffhome.cn',
+      //   changeOrigin: true,
+      //   pathRewrite: {
+      //     '^/login/': ''
+      //   }
+      // }
     },
     // Various Dev Server settings
     host: '127.0.0.1', // can be overwritten by process.env.HOST

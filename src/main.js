@@ -3,20 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import head from '@/pages/public/head'
-import footer from '@/pages/public/footer'
-import banner from '@/pages/public/banner'
 
 
-
-Vue.component('m-header', head)
-Vue.component('m-footer', footer)
-Vue.component('m-banner', banner)
-
-
-import 'vant/lib/index.css';
+//引入外部anitmated
+import './../static/css/animate.min.css'
 
 //vant
+import 'vant/lib/index.css';
 import { Loading } from 'vant';
 Vue.use(Loading);
 import { Field,Button,Toast,Divider } from 'vant'
@@ -33,21 +26,30 @@ import { ImagePreview } from 'vant';
 import { Form } from 'vant';
 import { Checkbox, CheckboxGroup } from 'vant';
 import { PullRefresh } from 'vant';
-import { list } from 'vant';
+import { Calendar } from 'vant';
+import { DatetimePicker } from 'vant';
+import { Switch } from 'vant';
+import { Dialog } from 'vant';
+import { NoticeBar } from 'vant';
+import { Swipe, SwipeItem } from 'vant';
+import { RadioGroup, Radio } from 'vant';
+import { Picker } from 'vant';
 
-Vue.use(List);
+Vue.use(Picker);
+Vue.use(Radio);
+Vue.use(RadioGroup);
+Vue.use(Swipe);
+Vue.use(SwipeItem);
+Vue.use(NoticeBar);
+Vue.use(Dialog);
+Vue.use(Switch);
+Vue.use(DatetimePicker);
+Vue.use(Calendar);
 Vue.use(Checkbox);
 Vue.use(CheckboxGroup);
 Vue.use(PullRefresh);
 // 全局注册
 Vue.use(ImagePreview);
-//瀑布流插件
-import waterfall from 'vue-waterfall2'
-Vue.use(waterfall)
-
-
-
-
 Vue.use(Form);
 Vue.use(Loading);
 Vue.use(List);
@@ -67,35 +69,53 @@ Vue.use(Toast)
 Vue.use(Divider)
 
 
+//animated
+import animated from 'animate.css';
+Vue.use(animated)
+
+// element ul
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
 //swiper
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 Vue.use(VueAwesomeSwiper)
 import 'swiper/css/swiper.css'
+//瀑布流插件
+import waterfall from 'vue-waterfall2'
+Vue.use(waterfall)
 
+//引入wow.js
+// import wow from 'wowjs'
+// import 'animate.css'
+// Vue.prototype.$wow=wow
+// import axios from 'axios'
 //代理部分
 import api from './request/api.js'
-
-// import axios from 'axios'
 import axios from './request/https.js'
 import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
 import qs from 'qs';
 Vue.prototype.$axios = axios
 axios.defaults.baseURL = '/api'
-
 Vue.prototype.api = api
 Vue.config.productionTip = false
 
+//新的
+
+
+
+
+
+//引入公用CSS
 
 import './../static/css/style.css'
-
-
-
-//
-// Vue.http.options.emulateJSON = true;
-// Vue.http.options.headers = {
-//   'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-// };
+//百度地图
+import BaiduMap from 'vue-baidu-map'
+Vue.use(BaiduMap, {
+  /* 需要注册百度地图开发者来获取你的ak */
+  ak: 'NI5YPG5rt4bWlt6AmLoFuOIos88uM53C'
+})
 
 /* eslint-disable no-new */
 new Vue({
@@ -104,18 +124,3 @@ new Vue({
 	components: { App },
 	template: '<App/>'
 });
-
-
-function getUserCode() {
-  let redirectURL = encodeURI((baseurl+"/author").split('&code')[0]);//获取地址
-  const base = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=';
-  let state;
-  let surl;
-  let reserveUrl;
-  let appid = "wx1c24d0b2f06df7f9";
-  let scope = "snsapi_userinfo";
-  // alert(redirectURL)
-  // return
-  window.location.href = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid}&redirect_uri=${redirectURL}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect`
-  // window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1c24d0b2f06df7f9&redirect_uri=http%3A%2F%2Ftest.sports.zongyutech.com%2Fapi%2Flogin%2Ftest&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect';
-}

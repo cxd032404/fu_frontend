@@ -8,7 +8,12 @@ import qs from 'qs'
 let axios = Axios.create({
 	// baseURL: process.env.API_ROOT,
 	timeout: 60000,
-	headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+	headers: { 'Content-Type': 'application/x-www-form-urlencoded',
+	'Accept': 'application/json',
+	'UserToken': window.localStorage.getItem("token"),
+	'code':window.localStorage.getItem("code")
+ 	},
+
 });
 
 

@@ -11,14 +11,22 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
+        //说正地址
         target: 'http://api.bestdo.cn',
+        //线上地址
         // target: 'http://api.staffhome.cn',
+        //login
+        // target: 'http://testapi.staffhome.cn',
+        ws: true,//跨域
         changeOrigin: true,
         pathRewrite: {
           '^/api/': ''
         }
       }
+
+
     },
+
 
     // Various Dev Server settings
     host: '192.168.31.185',//'localhost', // can be overwritten by process.env.HOST
